@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { Outlet, Link } from "react-router-dom";
 
 export default function LoginForm() {
   type FormData = {
@@ -11,7 +12,7 @@ export default function LoginForm() {
   
     return (
       <form onSubmit={onSubmit}>
-        <h1>Malwation</h1>
+        <h1>MALWATION</h1>
         <h2>Log in to your account</h2>
         <h3>Welcome back! Please enter your details.</h3>
         <input type="text" placeholder="e-mail" {...register("email", { required: true , pattern: /^\S+@\S+$/i})} />
@@ -25,6 +26,11 @@ export default function LoginForm() {
         Sign In
       </button>
         <h4>Don't have an account?<a>Sign Up</a></h4>
+        <Link to="/users">
+     <button type="button">
+          Click Me!
+     </button>
+      </Link>
       </form>
     );
   }
