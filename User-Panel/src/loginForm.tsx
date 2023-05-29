@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
 import { Outlet, Link } from "react-router-dom";
+import { Button } from "@material-tailwind/react";
 
-export default function LoginForm() {
+function LoginForm() {
   type FormData = {
     email: string;
     password: string;
@@ -12,7 +13,7 @@ export default function LoginForm() {
   
     return (
       <div className="container mx-auto my-8 px-4 w-2/4 h-3/4">
-      <form className="bg-white shadow-md rounded w-full h-full px-8 pt-6 pb-8 mb-4" onSubmit={onSubmit}>
+      <form className="bg-white shadow-md rounded w-full h-full px-8 pt-6 pb-8 mb-2" onSubmit={onSubmit}>
         <h1>MALWATION</h1>
         <h2>Log in to your account</h2>
         <h3>Welcome back! Please enter your details.</h3>
@@ -26,12 +27,14 @@ export default function LoginForm() {
         </div>
         <a>Forgot your password?</a>
         <Link to="/users">
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        <Button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
           Sign In
-        </button>
+        </Button>
         </Link>  
         <h4>Don't have an account?<a>Sign Up</a></h4>
       </form>
       </div>
     );
   }
+
+export { LoginForm };

@@ -1,29 +1,15 @@
-import { Component } from 'react';
-import { Outlet, Link } from "react-router-dom";
+import { Sidebar } from '/home/sadet/repos/User-Panel/User-Panel/src/sidebar';
 
-class Users extends Component {
-  constructor(props: string) {
-    super(props);
-  }
+export default function Users() {
 
-  render() {
     return (
-      <div className="container mx-auto bg-gray-200 rounded-xl shadow border p-8 m-10">
-        <h1>Users</h1>
-        <p className="text-3xl text-gray-700 font-bold mb-5">
-        Welcome!
-      </p>
-      <p className="text-black-500 text-lg">
-        React and Tailwind CSS in action
-      </p>
-        <Link to="/">
-        <button type="button">
-          Sign Out
-        </button>
-        </Link>  
+      <div className="container grid grid-cols-4 bg-gray-200 rounded-xl shadow border w-full h-screen">
+      <Sidebar></Sidebar>
+      <div className='grid grid-span-3'>
+        <p>back to users</p>
+        <p>update users</p>
+      </div>
       </div>
     );
-  }
 }
 
-export default Users;
