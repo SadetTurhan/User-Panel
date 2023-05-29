@@ -1,6 +1,9 @@
 import { useForm } from "react-hook-form";
 import { Outlet, Link } from "react-router-dom";
-import { Button } from "@material-tailwind/react";
+import { Button,
+  Card,
+  Input,
+  Typography,} from "@material-tailwind/react";
 
 function LoginForm() {
   type FormData = {
@@ -12,28 +15,26 @@ function LoginForm() {
     const onSubmit = handleSubmit(data => console.log(data));
   
     return (
-      <div className="container mx-auto my-8 px-4 w-2/4 h-3/4">
-      <form className="bg-white shadow-md rounded w-full h-full px-8 pt-6 pb-8 mb-2" onSubmit={onSubmit}>
-        <h1>MALWATION</h1>
-        <h2>Log in to your account</h2>
-        <h3>Welcome back! Please enter your details.</h3>
-        <div className="mb-4">
+      <Card className="h-screen flex items-center justify-center" color="transparent" shadow={false}>
+      <form className="w-60 max-w-screen-lg sm:w-96" onSubmit={onSubmit}>
+      <div className="flex flex-col gap-4">
+      <Typography variant="h3" color="blue-gray">MALWATION</Typography>
+        <Typography color="gray" className="mt-1 font-normal">Log in to your account</Typography>
+        <Typography color="gray" className="mt-1 font-normal">Welcome back! Please enter your details.</Typography>
       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">E-mail</label>
-        <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" type="text" placeholder="e-mail" {...register("email", { required: true , pattern: /^\S+@\S+$/i})} />
-        </div>
-        <div className="mb-6">
+        <Input size="lg" type="text" placeholder="e-mail" {...register("email", { required: true , pattern: /^\S+@\S+$/i})} />
       <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">Password</label>
-        <input className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" type="password" placeholder="******" {...register("password", { required: true })} />
+        <Input size="lg" type="password" placeholder="******" {...register("password", { required: true })} />
         </div>
         <a>Forgot your password?</a>
         <Link to="/users">
-        <Button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+        <Button fullWidth type="button">
           Sign In
         </Button>
         </Link>  
         <h4>Don't have an account?<a>Sign Up</a></h4>
       </form>
-      </div>
+      </Card>
     );
   }
 
