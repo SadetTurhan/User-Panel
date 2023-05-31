@@ -7,9 +7,9 @@ const user = users as Usertype[];
 import { LoginForm } from './loginForm'
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Users from './users';
+import { Users } from './users';
 import { UserTable } from './usertable';
-function App() {
+export default function App() {
   
 
   return (
@@ -23,4 +23,3 @@ function App() {
   )
 }
 
-export default App;
