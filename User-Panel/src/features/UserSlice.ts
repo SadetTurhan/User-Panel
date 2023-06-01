@@ -6,7 +6,7 @@ interface UserState {
 }
 
 const initialState: UserState = {
-    value: []
+    value: ["asda","asdad","asdsad","asdda","asdsa"]
 }
 export const UserSlice = createSlice({
     name: "users",
