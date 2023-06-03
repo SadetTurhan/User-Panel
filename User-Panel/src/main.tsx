@@ -1,14 +1,19 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import { Provider } from 'react-redux'
-import { store } from './store.ts'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import usersReducer from './redux/usersSlice';
+import App from './App';
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-    <Provider store={store}>
+const store = configureStore({
+  reducer: {
+    users: usersReducer,
+  },
+});
+
+ReactDOM.render(
+  <Provider store={store}>
     <App />
-  </Provider>
-  </React.StrictMode>,
-)
+  </Provider>,
+  document.getElementById('root')
+);

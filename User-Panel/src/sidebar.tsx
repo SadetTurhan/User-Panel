@@ -1,5 +1,3 @@
-import { Outlet, Link } from "react-router-dom";
-import { Button } from "@material-tailwind/react";
 import {
     Card,
     Typography,
@@ -65,11 +63,6 @@ function Sidebar(){
             <ListItemPrefix>
               <PowerIcon className="h-5 w-5" />
             </ListItemPrefix>
-            <Link to="/">
-        <Button>
-          Sign Out
-        </Button>
-        </Link>  
                  
           </ListItem>
         </List>
