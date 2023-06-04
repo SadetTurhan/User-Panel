@@ -4,19 +4,11 @@ import {
     List,
     ListItem,
     ListItemPrefix,
-    ListItemSuffix,
+    Input,
     Chip,
   } from "@material-tailwind/react";
-  import {
-    PresentationChartBarIcon,
-    ShoppingBagIcon,
-    UserCircleIcon,
-    Cog6ToothIcon,
-    InboxIcon,
-    PowerIcon,
-  } from "@heroicons/react/24/solid";
   import { Link } from "react-router-dom";
-   
+  import SearchIcon from '@mui/icons-material/Search';
 
 function Sidebar(){
     return (
@@ -25,6 +17,7 @@ function Sidebar(){
           <Typography variant="h3" color="blue-gray">
             Malwation
           </Typography>
+        <Input label="Search" icon={<SearchIcon />} />
         </div>
         <List>
           <ListItem>
@@ -36,7 +29,7 @@ function Sidebar(){
           <ListItem>
             Tasks
           </ListItem>
-          <ListItem>
+          <ListItem selected>
             Users
           </ListItem>
           <ListItem>
