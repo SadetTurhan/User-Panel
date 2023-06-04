@@ -1,57 +1,31 @@
-import React, { useState } from 'react';
+import userData from '../users.json'; 
+import { RootState } from '../redux/store';
+import { useSelector } from 'react-redux';
+import { SubmitHandler, FieldValues, useForm } from 'react-hook-form';
 
-const LoginForm: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+export default function LoginForm() {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const users = useSelector((state: RootState) => state.users.users);
+  const onSubmit = ((data: CustomFieldValues) => {
+  const { email, password } = data;
 
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
-  };
+  const users = userData.find((user) => user.email === email);
 
-  const handlePasswordChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Perform the logic to check if email and password match
-    if (email === 'example@example.com' && password === 'password') {
-      // Successful login, perform necessary actions (e.g., redirect to user panel)
-      console.log('Login successful!');
-    } else {
-      // Invalid login, display error message or perform appropriate action
-      console.log('Invalid login credentials!');
-    }
-    
-    // Clear the form fields
-    setEmail('');
-    setPassword('');
-  };
-
+  if (users && users.password === password) {
+    console.log('Login successful');
+  } else {
+    console.log('Invalid email or password');
+  }
+}) as SubmitHandler<FieldValues>;
+type CustomFieldValues = FieldValues & FormData;
+  console.log(errors);
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          value={email}
-          onChange={handleEmailChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          value={password}
-          onChange={handlePasswordChange}
-        />
-      </div>
-      <button type="submit">Login</button>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input type="text" placeholder="email" {...register("email", {required: true})} />
+
+      <input  type="text" placeholder='password' {...register("password", {required: true })} />
+
+      <button type="submit"  />
     </form>
   );
-};
-
-export default LoginForm;
+}

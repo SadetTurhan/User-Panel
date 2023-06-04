@@ -34,4 +34,4 @@ function UserPanel(){
   );
 };
 
-export default UserPanel;
+export { UserPanel };

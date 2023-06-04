@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, isAction, PayloadAction } from '@reduxjs/toolkit';
 import { User } from '../types/User';
 import usersData from '../users.json'; 
 
@@ -17,10 +17,14 @@ const initialState: UsersState = {
 const usersSlice = createSlice({
   name: 'users',
   initialState,
-  reducers: { deleteUser: (state, action: PayloadAction<number>) => {
+  reducers: { 
+    deleteUser: (state, action: PayloadAction<number>) => {
     state.users = state.users.filter(user => user.id !== action.payload);
-  },},
-});
+    signIn: (state:any, action: PayloadAction<PayloadAction>) => {
+    
+      }}
+    }
+  });
 
 export const { deleteUser } = usersSlice.actions;
 export default usersSlice.reducer;
