@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import {  User } from '../types/User';
 import { RootState } from '../redux/store';
 import { useDispatch } from 'react-redux';
 import { Sidebar } from '../sidebar';
@@ -30,7 +29,7 @@ function UserPanel(){
   return (
   <div className='grid grid-cols-5 bg-gradient-to-r from-light-green-50 to-light-green-100'>
       <Sidebar></Sidebar>
-      <div className='col-start-2 col-end-6 mt-12 ml-8 mr-8 p-6 mb-6' >
+      <div className='col-start-2 col-end-6 mt-8 ml-8 mr-8 p-6 mb-6' >
         <Typography variant="h2" className="mb-12">Users</Typography>
       <Card className="col-start-2 col-end-5 overflow-auto hover:overflow-scroll w-full mt-5">
       <table className="col-start-2 col-end-5 h-full w-full min-w-max table-auto text-left">
@@ -46,7 +45,7 @@ function UserPanel(){
         </tr>
       </thead>
       <tbody className='col-start-2 col-end-5 h-full w-full min-w-max text-left mb-5'>
-        {currentUsers.map((user: User) => (
+        {currentUsers.map((user: any) => (
          <tr key={user.id}>
             <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.name}</Typography></td>
            <td className='p-4 w-1/7'> <Typography variant="small" color="blue-gray" className="font-normal">{user.email}</Typography></td>

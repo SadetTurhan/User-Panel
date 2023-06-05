@@ -3,6 +3,7 @@ import { SubmitHandler, FieldValues, useForm} from 'react-hook-form';
 import { Card, Input, Button, Typography, CardHeader, CardBody } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
+import signupimg from "../assets/signup.jpg"
 import { z } from "zod";
 
 
@@ -33,7 +34,7 @@ type CustomFieldValues = FieldValues & FormData & ValidationSchema;
     <Card className="flex-row w-full h-full max-w-[48rem] mx-8 my-8">
       <CardHeader shadow={false} floated={false} className="w-2/5 shrink-0 m-0 rounded-r-none">
         <img 
-          src="./src/assets/signup.jpg" 
+          src={signupimg} 
           alt="image" 
           className="w-full h-full object-cover"
         />

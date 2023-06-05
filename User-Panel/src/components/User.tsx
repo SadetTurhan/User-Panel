@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { User as UserType } from '../types/User';
 import { deleteUser } from '../redux/usersSlice';
 
 interface UserProps {
