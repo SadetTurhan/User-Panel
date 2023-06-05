@@ -3,12 +3,13 @@ import {  User } from '../types/User';
 import { RootState } from '../redux/store';
 import { useDispatch } from 'react-redux';
 import { Sidebar } from '../sidebar';
-import { Card, Typography, Input} from "@material-tailwind/react";
+import { Card, Typography, Input, Button} from "@material-tailwind/react";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { deleteUser } from '../redux/usersSlice';
 import { Link } from 'react-router-dom';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
+import React,{ useState } from 'react';
 
 function UserPanel(){
   
@@ -17,6 +18,16 @@ function UserPanel(){
   const dispatch = useDispatch();
   const handleDelete = (userId: number) => {
     dispatch(deleteUser(userId));
+  };
+  const [currentPage, setCurrentPage] = useState(1);
+  const rowsPerPage = 10; // Change this value to the desired number of rows per page
+  const indexOfLastUser = currentPage * rowsPerPage;
+  const indexOfFirstUser = indexOfLastUser - rowsPerPage;
+  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
+
+  // Change the current page
+  const paginate = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
   };
 
   return (
@@ -39,7 +50,7 @@ function UserPanel(){
         </tr>
       </thead>
       <tbody className='col-start-2 col-end-5'>
-        {users.map((user: User) => (
+        {currentUsers.map((user: User) => (
          <tr key={user.id}>
             <td className='p-4'><Typography variant="small" color="blue-gray" className="font-normal">{user.name}</Typography></td>
            <td className='p-4'> <Typography variant="small" color="blue-gray" className="font-normal">{user.email}</Typography></td>
@@ -53,6 +64,10 @@ function UserPanel(){
         
       </tbody>
       </table>
+      <div className='flex justify-center mt-5'>
+          <Button className="flex items-center gap-2" color="blue-gray" onClick={() => paginate(currentPage - 1)}disabled={currentPage === 1}>Previous</Button>
+          <Button className="flex items-center gap-2" color="blue-gray" onClick={() => paginate(currentPage + 1)}disabled={indexOfLastUser >= users.length}>Next</Button>
+        </div>
     </Card>
     </div>
     </div>
