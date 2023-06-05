@@ -9,7 +9,7 @@ import { deleteUser } from '../redux/usersSlice';
 import { Link } from 'react-router-dom';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import CancelIcon from '@mui/icons-material/Cancel';
-import React,{ useState } from 'react';
+import { useState } from 'react';
 
 function UserPanel(){
   
@@ -33,7 +33,7 @@ function UserPanel(){
       <Sidebar></Sidebar>
       <div className='col-start-2 col-end-6 mt-12 ml-8 mr-8' >
         <Typography variant="h2">Users</Typography>
-        <Input label="Search User" className='w-2/4' />
+        <Input label="Search User" className='w-2/4'/>
       <Card className="col-start-2 col-end-5 overflow-auto hover:overflow-scroll h-3/4 w-full mt-5">
       <table className="col-start-2 col-end-5 h-full w-full min-w-max table-auto text-left">
       <thead>
@@ -47,24 +47,24 @@ function UserPanel(){
           <th className='p-4'></th>
         </tr>
       </thead>
-      <tbody className='col-start-2 col-end-5'>
+      <tbody className='col-start-2 col-end-5 h-full w-full min-w-max text-left'>
         {currentUsers.map((user: User) => (
          <tr key={user.id}>
-            <td className='p-4'><Typography variant="small" color="blue-gray" className="font-normal">{user.name}</Typography></td>
-           <td className='p-4'> <Typography variant="small" color="blue-gray" className="font-normal">{user.email}</Typography></td>
-           <td className='p-4'><Typography variant="small" color="blue-gray" className="font-normal">{user.phone}</Typography></td>
-           <td className='p-4'><Typography variant="small" color="blue-gray" className="font-normal">{user.role}</Typography></td>
-           <td className='p-4'><Typography variant="small" color="blue-gray" className="font-normal"> {user.isActive ? (<CheckCircleIcon/>) :  <CancelIcon />}</Typography></td>
-           <td className='p-4'><button onClick={() => handleDelete(user.id)}><DeleteIcon></DeleteIcon></button></td>
-           <td className='p-4'><Link to="/updateuser">Update User</Link></td>
+            <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.name}</Typography></td>
+           <td className='p-4 w-1/7'> <Typography variant="small" color="blue-gray" className="font-normal">{user.email}</Typography></td>
+           <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.phone}</Typography></td>
+           <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.role}</Typography></td>
+           <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal"> {user.isActive ? (<CheckCircleIcon/>) :  <CancelIcon />}</Typography></td>
+           <td className='p-4 w-1/7'><button onClick={() => handleDelete(user.id)}><DeleteIcon></DeleteIcon></button></td>
+           <td className='p-4 w-1/7'><Link to="/updateuser">Update User</Link></td>
           </tr>
         ))}
         
       </tbody>
       </table>
       <div className='flex justify-center mt-5'>
-          <Button className="flex items-center gap-2" color="blue-gray" onClick={() => paginate(currentPage - 1)}disabled={currentPage === 1}>Previous</Button>
-          <Button className="flex items-center gap-2" color="blue-gray" onClick={() => paginate(currentPage + 1)}disabled={indexOfLastUser >= users.length}>Next</Button>
+          <Button className="flex items-center gap-2 mt-2" color="blue-gray" onClick={() => paginate(currentPage - 1)}disabled={currentPage === 1}>Previous</Button>
+          <Button className="flex items-center gap-2 mt-2" color="blue-gray" onClick={() => paginate(currentPage + 1)}disabled={indexOfLastUser >= users.length}>Next</Button>
         </div>
     </Card>
     </div>

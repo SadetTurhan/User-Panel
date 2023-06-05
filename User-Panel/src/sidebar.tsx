@@ -8,7 +8,13 @@ import {
   } from "@material-tailwind/react";
   import { Link } from "react-router-dom";
   import SearchIcon from '@mui/icons-material/Search';
-
+  import LogoutIcon from '@mui/icons-material/Logout';
+  import HomeIcon from '@mui/icons-material/Home';
+  import TaskIcon from '@mui/icons-material/Task';
+  import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
+  import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
+  import HelpIcon from '@mui/icons-material/Help';
+  import SettingsIcon from '@mui/icons-material/Settings';
 function Sidebar(){
     return (
       <div className="h-screen bg-gradient-to-r from-blue-gray-50 to-blue-gray-100">
@@ -21,34 +27,26 @@ function Sidebar(){
         </div>
         <List>
           <ListItem>
-            Home
+            <HomeIcon></HomeIcon> Home
           </ListItem>
           <ListItem>
-            Projects
+            <FormatListBulletedIcon></FormatListBulletedIcon>Projects
           </ListItem>
           <ListItem>
-            Tasks
+            <TaskIcon></TaskIcon>Tasks
           </ListItem>
-          <ListItem selected>
-            Users
+          <Link to="/userpanel"><ListItem selected>
+            <SupervisorAccountIcon></SupervisorAccountIcon>Users
+          </ListItem></Link>
+          <ListItem>
+            <HelpIcon></HelpIcon>Support
           </ListItem>
           <ListItem>
-            Support
+            <SettingsIcon></SettingsIcon>Settings
           </ListItem>
-          <ListItem>
-            <ListItemPrefix>
-             
-            </ListItemPrefix>
-                 
-          </ListItem>
-          <ListItem>
-          
-            Settings
-          </ListItem>
-          
           <ListItem>
           <Link to="/">
-            Sign Out
+            <LogoutIcon></LogoutIcon>Sign Out
             </Link>
           </ListItem>
         
