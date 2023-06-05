@@ -11,5 +11,5 @@ Installation: <br>
 2)cd into the User-Panel.(there will be two folders. The first one with the readme.md file.cd once again "repos/User-Panel/User-Panel/")<br>
 3)before starting use npm install to install dependencies listed in "package.json"<br>
 4)npm run dev:This command will run the script defined in your package.json file under the "dev" key, which is vite. It will start the Vite development server and compile and serve your project.<br>
-
+5)to easily login you can use johnsmith@gmail.com as email and 123456 as password <br>
 Always open for critics and recommendations :)
