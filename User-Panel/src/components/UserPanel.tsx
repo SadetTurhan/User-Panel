@@ -20,12 +20,10 @@ function UserPanel(){
     dispatch(deleteUser(userId));
   };
   const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 10; // Change this value to the desired number of rows per page
+  const rowsPerPage = 10;
   const indexOfLastUser = currentPage * rowsPerPage;
   const indexOfFirstUser = indexOfLastUser - rowsPerPage;
   const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
-
-  // Change the current page
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
