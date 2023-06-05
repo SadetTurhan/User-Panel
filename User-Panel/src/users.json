@@ -1,4 +1,4 @@
-[{"id":1,"name":"Maryanne Giscken","password":"qqTSztsiUec","email":"mgiscken0@odnoklassniki.ru","phone":"296-791-5643","isActive":false},
+[{"id":1,"name":"John Smith","password":"123456","email":"johnsmith@gmail.com","phone":"296-791-5643","isActive":true},
 {"id":2,"name":"Durand Clapp","password":"jIXW4O","email":"dclapp1@e-recht24.de","phone":"872-673-9537","isActive":true},
 {"id":3,"name":"Aleta Harbertson","password":"5E5U9AbeEBy","email":"aharbertson2@answers.com","phone":"293-761-9523","isActive":true},
 {"id":4,"name":"Dita Jelliman","password":"NTLFccHhhTT","email":"djelliman3@flavors.me","phone":"205-805-7660","isActive":false},

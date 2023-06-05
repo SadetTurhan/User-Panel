@@ -5,26 +5,29 @@ import {
     Button,
     Typography,
     CardBody,
-    Checkbox,
+    Checkbox
   } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import TransitEnterexitIcon from '@mui/icons-material/TransitEnterexit';
-function UpdateUser(){
+export function UpdateUser(){
     return (
         <div className='grid grid-cols-5'>
       <Sidebar></Sidebar>
       <div className='col-start-2 col-end-5'>
         <div className="mx-8 my-8"><Link to="/userpanel"><Typography variant="h2"><TransitEnterexitIcon className="mr-8"></TransitEnterexitIcon>Back to users</Typography></Link></div>
         <Card className="w-full">
+          <Typography variant="h2" className="text-center">Update User information</Typography>
         <CardBody className='h-full'>
         <form>
-          <div className="grid grid-cols-2">
+          <div className="ml-72 my-8 w-1/2">
           <label>Name<Input></Input></label>
           <label>Mail<Input></Input></label>
           <label>Phone<Input></Input></label>
-          <label>Role<Input></Input></label>
+          <label >Role<Input></Input></label>
+          </div>
+          <div className="flex justify-center mx-8 my-8">
           <label>Active<Checkbox  ripple={true}></Checkbox></label>
-          <Button className=" w-1/4 mx-8 my-8">Update User</Button>
+          <Button>Update User</Button>
           </div>
         </form>
         </CardBody>
@@ -34,4 +37,3 @@ function UpdateUser(){
     );
   };
   
-  export  { UpdateUser };

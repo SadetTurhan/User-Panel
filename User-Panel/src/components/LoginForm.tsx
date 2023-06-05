@@ -28,7 +28,7 @@ export function LoginForm() {
 type CustomFieldValues = FieldValues & FormData & ValidationSchema;
   
   return (
-    <div className="h-screen bg-gradient-to-r from-green-300 to-green-400">
+    <div className="h-screen bg-gradient-to-r from-green-100 to-green-200">
     <div className="flex justify-center text-center">
     <Card className="flex-row w-full h-full max-w-[48rem] mx-8 my-8">
       <CardHeader shadow={false} floated={false} className="w-2/5 shrink-0 m-0 rounded-r-none">

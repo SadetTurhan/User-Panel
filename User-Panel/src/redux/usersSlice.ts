@@ -1,4 +1,4 @@
-import { createSlice, isAction, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { User } from '../types/User';
 import usersData from '../users.json'; 
 
@@ -20,9 +20,7 @@ const usersSlice = createSlice({
   reducers: { 
     deleteUser: (state: UsersState, action: PayloadAction<number>) => {
     state.users = state.users.filter(user => user.id !== action.payload);
-    signIn: (state:any, action: PayloadAction<PayloadAction>) => {
-      return state.users
-      }}
+    }
     }
 
   });

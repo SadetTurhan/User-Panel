@@ -3,8 +3,7 @@ import {
     Typography,
     List,
     ListItem,
-    ListItemPrefix,
-    Input,
+    Input
   } from "@material-tailwind/react";
   import { Link } from "react-router-dom";
   import SearchIcon from '@mui/icons-material/Search';
@@ -18,7 +17,7 @@ import {
 function Sidebar(){
     return (
       <div className="h-screen bg-gradient-to-r from-blue-gray-50 to-blue-gray-100">
-        <Card className=" primary fixed top-4 left-4 h-[calc(100vh-2rem)] w-full max-w-[20rem] p-4 shadow-xl shadow-blue-gray-900/5">
+        <Card className=" primary fixed h-[calc(100vh)] w-full max-w-[25rem] p-4 shadow-sm shadow-blue-gray-900/5">
         <div className="mb-2 p-4">
           <Typography variant="h3" color="stone-300">
             Malwation
@@ -46,7 +45,7 @@ function Sidebar(){
           </ListItem>
           <ListItem>
           <Link to="/">
-            <LogoutIcon></LogoutIcon>Sign Out
+            <LogoutIcon ></LogoutIcon>Sign Out
             </Link>
           </ListItem>
         
