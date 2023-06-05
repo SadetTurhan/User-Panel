@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { User } from '../types/User';
+import {  User } from '../types/User';
 import { RootState } from '../redux/store';
 import { useDispatch } from 'react-redux';
 import { Sidebar } from '../sidebar';
@@ -19,11 +19,10 @@ function UserPanel(){
     dispatch(deleteUser(userId));
   };
 
-  
   return (
-  <div className='grid grid-cols-5'>
+  <div className='grid grid-cols-5 bg-gradient-to-r from-light-green-50 to-light-green-100'>
       <Sidebar></Sidebar>
-      <div className='col-start-2 col-end-5 mt-12 ml-8'>
+      <div className='col-start-2 col-end-6 mt-12 ml-8 mr-8' >
         <Typography variant="h2">Users</Typography>
         <Input label="Search User" className='w-2/4' />
       <Card className="col-start-2 col-end-5 overflow-auto hover:overflow-scroll h-3/4 w-full mt-5">
