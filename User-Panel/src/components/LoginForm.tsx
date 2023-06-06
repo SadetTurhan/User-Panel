@@ -32,7 +32,7 @@ export default function LoginForm() {
     }
   }
 
-type CustomFieldValues = FieldValues & FormData & ValidationSchema;
+
   
   return (
     <div className="h-screen bg-gradient-to-r from-green-100 to-green-200">

@@ -7,11 +7,15 @@ import {
   CardBody,
   Checkbox,
 } from "@material-tailwind/react";
-import { Link } from "react-router-dom";
 import TransitEnterexitIcon from "@mui/icons-material/TransitEnterexit";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { UserType } from "../types/UserType";
+import { Link, useNavigate } from "react-router-dom";
 
 const validationSchema = z.object({
   email: z.string().min(1, { message: "Email area can not be empty" }).email({ message: "Wrong email format" }),
@@ -25,11 +29,22 @@ const validationSchema = z.object({
 type ValidationSchema = z.infer<typeof validationSchema>;
 
 function UpdateUser() {
+  const nav = useNavigate();
   const { register, handleSubmit, formState: { errors } } = useForm<ValidationSchema>({ resolver: zodResolver(validationSchema) });
-
+  const { userId } = useParams();
+  const [user, setUser] = useState<UserType | null>(null);
+  console.log(userId);
   const onSubmit = (data: ValidationSchema) => {
-    console.log(data);
+    axios.put(`http://localhost:3000/users/${userId}`, data)
+      .then(response => {
+        console.log('User updated successfully:', response.data);
+        nav("/userpanel")
+      })
+      .catch(error => {
+        console.log('Error updating user:', error);
+      });
   };
+  
   
   return (
     <div className="grid grid-cols-5 h-screen bg-gradient-to-r from-green-50 to-light-green-100">
@@ -54,7 +69,7 @@ function UpdateUser() {
               <div className="flex p-8 grid grid-cols-2 gap-4">
                 <label>
                   Name
-                  <Input type="text" {...register("name", { required: true })} />
+                  <Input type="text" {...register("name", { required: true })}  defaultValue={user?.name} />
                   {errors.name && <p className="text-xs italic text-red-500">{errors.name.message}</p>}
                 </label>
                 <label>

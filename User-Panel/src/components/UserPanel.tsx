@@ -75,7 +75,7 @@ function UserPanel() {
                   <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.role}</Typography></td>
                   <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.isActive ? (<CheckCircleIcon />) : <CancelIcon />}</Typography></td>
                   <td className='p-4 w-1/7'><button onClick={() => handleDelete(user.id)}><DeleteIcon /></button></td>
-                  <td className='p-4 w-1/7'><Link to="/updateuser"><Tooltip content="Update the user information from here">Update User</Tooltip></Link></td>
+                  <td className='p-4 w-1/7'><Link key={user.id} to={`/updateuser/${user.id}`}><Tooltip content="Update the user information from here">Update User</Tooltip></Link></td>
                 </tr>
               ))}
             </tbody>

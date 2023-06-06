@@ -12,7 +12,7 @@ function App(){
       <Route element={<LoginForm/>} />
       <Route path="/" element={<LoginForm />} />
       <Route path="/userpanel" element={<UserPanel />} />
-      <Route path="/updateuser" element={<UpdateUser />} />
+      <Route path="/updateuser/:userId" element={<UpdateUser />} />
     </Routes>
   </Router>
   );

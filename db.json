@@ -1,27 +1,26 @@
 {
   "Users": [
-    {"id":1,
-    "name":"John Smith",
-    "password":"123456",
-    "email":"johnsmith@gmail.com",
-    "phone":"296-791-5643",
-    "isActive":true
-  },
-  {
-    "id": 2,
-    "name": "Aleta Harbertson",
-    "password": "5E5U9AbeEBy",
-    "email": "aharbertson2@answers.com",
-    "phone": "293-761-9523",
-    "isActive": true
-  },
     {
-      "id": 3,
-      "name": "Aleta Harbertson",
-      "password": "5E5U9AbeEBy",
-      "email": "aharbertson2@answers.com",
-      "phone": "293-761-9523",
+      "id": 1,
+      "name": "John Smith",
+      "password": "123456",
+      "email": "johnsmith@gmail.com",
+      "phone": "296-791-5643",
       "isActive": true
+    },
+    {
+      "email": "Janesmith@gmail.com",
+      "name": "Jane Smith",
+      "phone": "0535-555-555-55",
+      "role": "user",
+      "id": 2
+    },
+    {
+      "email": "hans@gmail.com",
+      "name": "Hans Schmitt",
+      "phone": "123123123",
+      "role": "user",
+      "id": 3
     },
     {
       "id": 4,
