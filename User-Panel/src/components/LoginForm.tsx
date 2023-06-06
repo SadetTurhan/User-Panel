@@ -1,10 +1,11 @@
-import userData from '../users.json'; 
+import { UserType } from '../types/UserType';
 import { SubmitHandler, FieldValues, useForm} from 'react-hook-form';
 import { Card, Input, Button, Typography, CardHeader, CardBody } from "@material-tailwind/react";
 import { useNavigate } from "react-router-dom";
 import { zodResolver } from "@hookform/resolvers/zod";
 import signupimg from "../assets/signup.jpg"
 import { z } from "zod";
+import axios from 'axios';
 
 
 const validationSchema = z.object({
@@ -13,18 +14,23 @@ const validationSchema = z.object({
   })
   type ValidationSchema = z.infer<typeof validationSchema>;
 
-export function LoginForm() {
+export default function LoginForm() {
   const { register, handleSubmit, formState: { errors } } = useForm<ValidationSchema>({resolver: zodResolver(validationSchema)});
   const nav = useNavigate();
-  const onSubmit = ((data: CustomFieldValues) => {
-  const { email, password } = data;
-  const users = userData.find((user) => user.email === email);
-    if (users && users.password === password) {
-      nav("/userpanel");
-    } else {
-    console.log('Invalid email or password');
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    const { email, password } = data;
+    try {
+      const response = await axios.get<UserType[]>(`http://localhost:3000/users?email=${email}&password=${password}`);
+      const users = response.data;
+      if (users.length > 0) {
+        nav("/userpanel");
+      } else {
+        console.log('Invalid email or password');
+      }
+    } catch (error) {
+      console.log('Error fetching users:', error);
     }
-  }) as SubmitHandler<FieldValues>;
+  }
 
 type CustomFieldValues = FieldValues & FormData & ValidationSchema;
   

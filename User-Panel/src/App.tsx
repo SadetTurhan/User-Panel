@@ -1,6 +1,6 @@
 import   { UserPanel }    from './components/UserPanel';
 import './App.css'
-import  { LoginForm }  from './components/LoginForm';
+import   LoginForm   from './components/LoginForm';
 import {  BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { UpdateUser } from './components/UpdateUser';
 
