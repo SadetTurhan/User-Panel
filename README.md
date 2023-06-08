@@ -5,6 +5,7 @@ Project Description: A small project which aims to create a user panel where the
 API Documentation:The data used here comes from json server. To make it work be sure you have json-server downloaded(for more information read: https://www.npmjs.com/package/json-server).<br>
 ![loginpage](https://github.com/SadetTurhan/User-Panel/assets/57369165/abaca5d0-3547-453e-9353-107cd741be41)
 ![userpanel](https://github.com/SadetTurhan/User-Panel/assets/57369165/51260e47-230d-463f-82b6-9766bfa98eff)
+![updateuser](https://github.com/SadetTurhan/User-Panel/assets/57369165/45e213ee-dbfb-4ec5-b7c8-f66d5f7326c5)
 Installation: <br>
 1)Using the ssh key create a clone in your repos folder<br>
 2)cd into the User-Panel.(there will be two folders. The first one with the readme.md and db.json file.cd once again "repos/User-Panel/User-Panel/")<br>
