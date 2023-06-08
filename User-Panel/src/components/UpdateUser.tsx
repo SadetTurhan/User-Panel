@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Card, Input, Button, Typography, CardBody, Checkbox } from '@material-tailwind/react';
+import { Card, Input, Button, Typography, CardBody, Checkbox, CardHeader} from '@material-tailwind/react';
 import TransitEnterexitIcon from '@mui/icons-material/TransitEnterexit';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -8,6 +8,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
 import { UserType } from '../types/UserType';
 import { Sidebar } from '../sidebar';
+import updateuser from "../assets/updateuser.jpg"
 
 const validationSchema = z.object({
   email: z.string().min(1, { message: 'Email area cannot be empty' }).email({ message: 'Wrong email format' }),
@@ -67,12 +68,15 @@ function UpdateUser() {
       <Sidebar></Sidebar>
       <div className="p-6 col-start-2 col-end-5 mt-8 mr-8 mb-6">
         <Link to="/userpanel">
-          <Typography className="mb-8 ml-6" variant="h2">
+          <Typography className="mb-8 ml-6" variant="h3">
             <TransitEnterexitIcon className="ml-2" />
             Back to users
           </Typography>
         </Link>
         <Card className="col-start-2 col-end-5 mt-10 ml-8 mr-4 p-8">
+        <CardHeader className="relative h-48 w-full mr-8 p-1">
+        <img src={updateuser} alt="img-blur-shadow"  />
+      </CardHeader>
           <CardBody className="h-full">
             <form onSubmit={handleSubmit(onSubmit)}>
               <Typography variant="h1" className="text-center text-black-500 mb-5">

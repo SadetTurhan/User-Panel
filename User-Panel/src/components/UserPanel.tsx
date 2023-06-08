@@ -19,6 +19,8 @@ function UserPanel() {
     const dispatch = useDispatch();
   
     const handleDelete = async (userId: number) => {
+      const confirmDelete = window.confirm('Are you sure you want to delete the user?');
+  if (confirmDelete) {
       try {
         await axios.delete(`http://localhost:3000/users/${userId}`);
         dispatch(deleteUser(userId));
@@ -26,7 +28,7 @@ function UserPanel() {
         console.log('Error deleting user:', error);
       }
     };
-  
+    }
     useEffect(() => {
       axios.get<UserType[]>(`http://localhost:3000/users`)
         .then(response => {
@@ -41,17 +43,18 @@ function UserPanel() {
   const indexOfLastUser = currentPage * rowsPerPage;
   const indexOfFirstUser = indexOfLastUser - rowsPerPage;
   const currentUsers: UserType[] = users.slice(indexOfFirstUser, indexOfLastUser);
-
+  const totalPages = Math.ceil(users.length / rowsPerPage);
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
   };
+  const totalUsers = users.length;
 
   return (
 
     <div className='grid grid-cols-5 bg-gradient-to-r from-green-50 to-green-100'>
       <Sidebar></Sidebar>
       <div className='col-start-2 col-end-6 mt-8 ml-8 mr-8 p-6 mb-6'>
-        <Typography variant="h2" className="mb-12">Users</Typography>
+        <Typography variant="h3" className="mb-12">Users</Typography>
         <Card className="col-start-2 col-end-5 overflow-auto hover:overflow-scroll w-full mt-5">
           <table className="col-start-2 col-end-5 h-full w-full min-w-max table-auto text-left">
             <thead>
@@ -72,7 +75,7 @@ function UserPanel() {
                   <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.email}</Typography></td>
                   <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.phone}</Typography></td>
                   <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.role}</Typography></td>
-                  <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.isActive ? (<CheckCircleIcon />) : <CancelIcon />}</Typography></td>
+                  <td className='p-4 w-1/7'><Typography variant="small" color="blue-gray" className="font-normal">{user.isActive ? (<CheckCircleIcon style={{ color: "green" }}/>) : <CancelIcon style={{ color: "red" }} />}</Typography></td>
                   <td className='p-4 w-1/7'><button onClick={() => handleDelete(user.id)}><DeleteIcon /></button></td>
                   <td className='p-4 w-1/7'><Link key={user.id} to={`/updateuser/${user.id}`}><Tooltip content="Update the user information from here">Update User</Tooltip></Link></td>
                 </tr>
@@ -80,10 +83,26 @@ function UserPanel() {
             </tbody>
           </table>
           <hr />
-          <div className='flex justify-center mt-5'>
-            <Button className="flex items-center gap-2 mt-2" color="blue-gray" onClick={() => paginate(currentPage - 1)} disabled={currentPage === 1}>Previous</Button>
-            <Button className="flex items-center gap-2 mt-2" color="blue-gray" onClick={() => paginate(currentPage + 1)} disabled={indexOfLastUser >= users.length}>Next</Button>
-          </div>
+          <div className="flex justify-center mt-5">
+        <button
+          className="mr-2 px-4 py-2 bg-green-300 text-white rounded-md"
+          onClick={() => paginate(currentPage - 1)}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        <div className="flex items-center mx-4 text-lg font-semibold">
+          Page {currentPage} of {totalPages}
+        </div>
+        <button
+          className="ml-2 px-4 py-2 bg-green-300 text-white rounded-md"
+          onClick={() => paginate(currentPage + 1)}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
+      </div>
+          
         </Card>
       </div>
     </div>

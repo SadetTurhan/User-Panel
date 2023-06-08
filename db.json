@@ -1,25 +1,25 @@
 {
   "Users": [
     {
-      "id": 1,
-      "name": "John Smith",
-      "password": "123456",
       "email": "johnsmith@gmail.com",
+      "name": "John Smith",
       "phone": "296-791-5643",
       "role": "admin",
-      "isActive": true
+      "isActive": true,
+      "id": 1
     },
     {
       "email": "Janesmith@gmail.com",
       "name": "Jane Smith",
       "phone": "0535-555-555-55",
       "role": "user",
+      "isActive": true,
       "id": 2
     },
     {
       "email": "hans@gmail.com",
       "name": "Hans Schmitt",
-      "phone": "123123123",
+      "phone": "1231-231-323",
       "role": "admin",
       "isActive": true,
       "id": 3
@@ -27,7 +27,7 @@
     {
       "email": "johannes@gmail.com",
       "name": "Johannes Smither",
-      "phone": "252525-1414-1452",
+      "phone": "2525-1414-1452",
       "role": "admin",
       "isActive": true,
       "id": 4
@@ -41,58 +41,44 @@
       "id": 5
     },
     {
-      "id": 6,
-      "name": "Amble Linthead",
-      "password": "qE062nh",
       "email": "alinthead5@whitehouse.gov",
+      "name": "Amble Linthead",
       "phone": "199-214-0393",
       "role": "user",
-      "isActive": true
+      "isActive": true,
+      "id": 6
     },
     {
-      "id": 7,
-      "name": "Mallissa Sowden",
-      "password": "D2cNOwUh7XHU",
       "email": "msowden6@thetimes.co.uk",
+      "name": "Mallissa Sowden",
       "phone": "447-499-8347",
       "role": "user",
-      "isActive": false
+      "isActive": false,
+      "id": 7
     },
     {
-      "id": 8,
-      "name": "May Kingerby",
-      "password": "CzY9R3h",
       "email": "mkingerby7@lycos.com",
+      "name": "May Kingerby",
       "phone": "594-182-9282",
       "role": "user",
-      "isActive": true
+      "isActive": false,
+      "id": 8
     },
     {
-      "id": 9,
-      "name": "Nydia Piesold",
-      "password": "575WsU",
       "email": "npiesold8@hc360.com",
+      "name": "Nydia Piesold",
       "phone": "339-979-1264",
       "role": "user",
-      "isActive": false
+      "isActive": false,
+      "id": 9
     },
     {
-      "id": 10,
-      "name": "Violetta Brearton",
-      "password": "CfJGNdk",
-      "email": "vbrearton9@webmd.com",
-      "phone": "797-428-6842",
-      "role": "user",
-      "isActive": true
-    },
-    {
-      "id": 11,
-      "name": "Kristel Hellmore",
-      "password": "wqmVAI",
       "email": "khellmorea@lulu.com",
+      "name": "Kristel Hellmore",
       "phone": "689-310-2232",
       "role": "admin",
-      "isActive": true
+      "isActive": true,
+      "id": 11
     },
     {
       "id": 12,
@@ -509,13 +495,12 @@
       "isActive": true
     },
     {
-      "id": 58,
-      "name": "Laurie Batisse",
-      "password": "rpi7tZsVI2s",
-      "role": "user",
       "email": "lbatisse1l@arstechnica.com",
+      "name": "Laurie Batisse",
       "phone": "460-213-6206",
-      "isActive": false
+      "role": "user",
+      "isActive": false,
+      "id": 58
     },
     {
       "id": 59,
@@ -851,15 +836,6 @@
       "isActive": false
     },
     {
-      "id": 96,
-      "name": "Deerdre Halewood",
-      "password": "8lskAOl",
-      "role": "user",
-      "email": "dhalewood2n@myspace.com",
-      "phone": "638-136-5894",
-      "isActive": false
-    },
-    {
       "id": 97,
       "name": "Yasmin Tubb",
       "password": "dWjk1OZAA",
@@ -885,15 +861,6 @@
       "email": "saleksandrov2q@dell.com",
       "phone": "749-820-7520",
       "isActive": true
-    },
-    {
-      "id": 100,
-      "name": "Town Brownjohn",
-      "password": "jsPgepiJBGZ",
-      "role": "user",
-      "email": "tbrownjohn2r@reddit.com",
-      "phone": "813-421-3472",
-      "isActive": false
     }
   ]
 }

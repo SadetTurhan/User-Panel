@@ -14,10 +14,16 @@ import {
   import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
   import HelpIcon from '@mui/icons-material/Help';
   import SettingsIcon from '@mui/icons-material/Settings';
+import { useState } from "react";
+
 function Sidebar(){
+  const [open, setOpen] = useState(false);
+  const toggleOpen = () => setOpen(cur => !cur);
+  
     return (
       <div className="h-screen bg-gradient-to-r from-blue-gray-50 to-blue-gray-100">
-        <Card className=" primary fixed h-[calc(100vh)] w-full max-w-[25rem] p-4 shadow-sm shadow-blue-gray-900/5">
+  
+        <Card className=" primary fixed h-[calc(100vh)] w-full max-w-[25rem] p-4 shadow-sm shadow-blue-gray-900/5 ">
         <div className="mb-2 p-4">
           <Typography variant="h3" color="stone-300">
             Malwation
@@ -51,6 +57,7 @@ function Sidebar(){
         
         </List>
       </Card>
+
       </div>
     );
   }
