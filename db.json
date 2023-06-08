@@ -20,7 +20,8 @@
       "email": "hans@gmail.com",
       "name": "Hans Schmitt",
       "phone": "123123123",
-      "role": "user",
+      "role": "admin",
+      "isActive": true,
       "id": 3
     },
     {
@@ -28,16 +29,16 @@
       "name": "Johannes Smither",
       "phone": "252525-1414-1452",
       "role": "admin",
+      "isActive": true,
       "id": 4
     },
     {
-      "id": 5,
-      "name": "Sigmund Hathorn",
-      "password": "8Wr2rp58",
       "email": "shathorn4@cbsnews.com",
+      "name": "Sigmund Hathorn",
       "phone": "103-374-1000",
       "role": "user",
-      "isActive": false
+      "isActive": true,
+      "id": 5
     },
     {
       "id": 6,

@@ -30,25 +30,26 @@ function UpdateUser() {
   });
   const { userId } = useParams();
   const [user, setUser] = useState<UserType | null>(null);
-
   const onSubmit = (data: ValidationSchema) => {
+    const updatedUserData = { ...data, isActive };
     axios
-      .put(`http://localhost:3000/users/${userId}`, data)
+      .put(`http://localhost:3000/users/${userId}`, updatedUserData)
       .then((response) => {
         console.log('User updated successfully:', response.data);
+        setUser(response.data);
         nav('/userpanel');
       })
       .catch((error) => {
         console.log('Error updating user:', error);
       });
   };
-
   useEffect(() => {
     const fetchUserData = async () => {
       try {
         const response = await axios.get(`http://localhost:3000/users/${userId}`);
         const userData = response.data;
         setUser(userData);
+        setIsActive(userData.isActive);
         setValue('name', userData.name);
         setValue('email', userData.email);
         setValue('phone', userData.phone);
@@ -60,7 +61,7 @@ function UpdateUser() {
 
     fetchUserData();
   }, [userId, setValue]);
-
+  const [isActive, setIsActive] = useState(false);
   return (
     <div className="grid grid-cols-5 h-screen bg-gradient-to-r from-green-50 to-light-green-100">
       <Sidebar></Sidebar>
@@ -110,9 +111,12 @@ function UpdateUser() {
                 </label>
               </div>
               <label>
-                Status
-                <Checkbox defaultChecked />
-              </label>
+        Status
+        <Checkbox
+  defaultChecked={isActive}
+  onChange={(e) => setIsActive(e.target.checked)}
+/>
+            </label>
               <Button color="blue" className="float-right mt-4 w-1/8" type="submit">
                 Update User
               </Button>
