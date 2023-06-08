@@ -15,7 +15,7 @@ import axios from 'axios';
 
 
 function UserPanel() {
-  
+     const [user, setUser] = useState<UserType | null>(null);
     const users = useSelector((state: RootState) => state.users.users);
     const dispatch = useDispatch();
   

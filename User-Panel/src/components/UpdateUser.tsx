@@ -1,51 +1,66 @@
-import { Sidebar } from "../sidebar";
-import {
-  Card,
-  Input,
-  Button,
-  Typography,
-  CardBody,
-  Checkbox,
-} from "@material-tailwind/react";
-import TransitEnterexitIcon from "@mui/icons-material/TransitEnterexit";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Card, Input, Button, Typography, CardBody, Checkbox } from '@material-tailwind/react';
+import TransitEnterexitIcon from '@mui/icons-material/TransitEnterexit';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 import axios from 'axios';
-import { UserType } from "../types/UserType";
-import { Link, useNavigate } from "react-router-dom";
+import { UserType } from '../types/UserType';
+import { Sidebar } from '../sidebar';
 
 const validationSchema = z.object({
-  email: z.string().min(1, { message: "Email area can not be empty" }).email({ message: "Wrong email format" }),
-  name: z.string().min(6, { message: "Name area can not be empty" }),
+  email: z.string().min(1, { message: 'Email area cannot be empty' }).email({ message: 'Wrong email format' }),
+  name: z.string().min(6, { message: 'Name area cannot be empty' }),
   phone: z.string(),
-  role: z.enum(["user", "admin"]).refine(value => value === "user" || value === "admin", {
-    message: "Invalid role",
-  }),
+  role: z.enum(['user', 'admin']).refine(
+    (value) => value === 'user' || value === 'admin',
+    {
+      message: 'Invalid role',
+    }
+  ),
 });
 
 type ValidationSchema = z.infer<typeof validationSchema>;
 
 function UpdateUser() {
   const nav = useNavigate();
-  const { register, handleSubmit, formState: { errors } } = useForm<ValidationSchema>({ resolver: zodResolver(validationSchema) });
+  const { register, handleSubmit, formState: { errors }, setValue } = useForm<ValidationSchema>({
+    resolver: zodResolver(validationSchema),
+  });
   const { userId } = useParams();
   const [user, setUser] = useState<UserType | null>(null);
-  console.log(userId);
+
   const onSubmit = (data: ValidationSchema) => {
-    axios.put(`http://localhost:3000/users/${userId}`, data)
-      .then(response => {
+    axios
+      .put(`http://localhost:3000/users/${userId}`, data)
+      .then((response) => {
         console.log('User updated successfully:', response.data);
-        nav("/userpanel")
+        nav('/userpanel');
       })
-      .catch(error => {
+      .catch((error) => {
         console.log('Error updating user:', error);
       });
   };
-  
-  
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:3000/users/${userId}`);
+        const userData = response.data;
+        setUser(userData);
+        setValue('name', userData.name);
+        setValue('email', userData.email);
+        setValue('phone', userData.phone);
+        setValue('role', userData.role);
+      } catch (error) {
+        console.log('Error fetching user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, [userId, setValue]);
+
   return (
     <div className="grid grid-cols-5 h-screen bg-gradient-to-r from-green-50 to-light-green-100">
       <Sidebar></Sidebar>
@@ -69,24 +84,25 @@ function UpdateUser() {
               <div className="flex p-8 grid grid-cols-2 gap-4">
                 <label>
                   Name
-                  <Input type="text" {...register("name", { required: true })}  defaultValue={user?.name} />
+                  <Input type="text" {...register('name', { required: true })} defaultValue={user?.name} />
                   {errors.name && <p className="text-xs italic text-red-500">{errors.name.message}</p>}
                 </label>
                 <label>
                   Email
-                  <Input type="text" {...register("email", { required: true })} />
+                  <Input type="text" {...register('email', { required: true })} defaultValue={user?.email} />
                   {errors.email && <p className="text-xs italic text-red-500">{errors.email.message}</p>}
                 </label>
                 <label>
                   Phone
-                  <Input type="text" {...register("phone", { required: true })} />
+                  <Input type="text" {...register('phone', { required: true })} defaultValue={user?.phone} />
                   {errors.phone && <p className="text-xs italic text-red-500">{errors.phone.message}</p>}
                 </label>
                 <label>
                   Role
                   <select
-                    {...register("role", { required: true })}
+                    {...register('role', { required: true })}
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    defaultValue={user?.role}
                   >
                     <option value="user">User</option>
                     <option value="admin">Admin</option>

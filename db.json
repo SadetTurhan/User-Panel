@@ -6,6 +6,7 @@
       "password": "123456",
       "email": "johnsmith@gmail.com",
       "phone": "296-791-5643",
+      "role": "admin",
       "isActive": true
     },
     {
@@ -23,12 +24,11 @@
       "id": 3
     },
     {
-      "id": 4,
-      "name": "Dita Jelliman",
-      "password": "NTLFccHhhTT",
-      "email": "djelliman3@flavors.me",
-      "phone": "205-805-7660",
-      "isActive": false
+      "email": "johannes@gmail.com",
+      "name": "Johannes Smither",
+      "phone": "252525-1414-1452",
+      "role": "admin",
+      "id": 4
     },
     {
       "id": 5,
@@ -36,6 +36,7 @@
       "password": "8Wr2rp58",
       "email": "shathorn4@cbsnews.com",
       "phone": "103-374-1000",
+      "role": "user",
       "isActive": false
     },
     {
@@ -44,6 +45,7 @@
       "password": "qE062nh",
       "email": "alinthead5@whitehouse.gov",
       "phone": "199-214-0393",
+      "role": "user",
       "isActive": true
     },
     {
@@ -52,6 +54,7 @@
       "password": "D2cNOwUh7XHU",
       "email": "msowden6@thetimes.co.uk",
       "phone": "447-499-8347",
+      "role": "user",
       "isActive": false
     },
     {
@@ -60,6 +63,7 @@
       "password": "CzY9R3h",
       "email": "mkingerby7@lycos.com",
       "phone": "594-182-9282",
+      "role": "user",
       "isActive": true
     },
     {
@@ -68,6 +72,7 @@
       "password": "575WsU",
       "email": "npiesold8@hc360.com",
       "phone": "339-979-1264",
+      "role": "user",
       "isActive": false
     },
     {
@@ -76,6 +81,7 @@
       "password": "CfJGNdk",
       "email": "vbrearton9@webmd.com",
       "phone": "797-428-6842",
+      "role": "user",
       "isActive": true
     },
     {
@@ -84,6 +90,7 @@
       "password": "wqmVAI",
       "email": "khellmorea@lulu.com",
       "phone": "689-310-2232",
+      "role": "admin",
       "isActive": true
     },
     {
@@ -92,6 +99,7 @@
       "password": "jZBZdIEQXAP",
       "email": "pbriseb@virginia.edu",
       "phone": "110-253-9469",
+      "role": "admin",
       "isActive": true
     },
     {
@@ -100,6 +108,7 @@
       "password": "y8NGcE8",
       "email": "awitherbyc@posterous.com",
       "phone": "844-980-9605",
+      "role": "user",
       "isActive": true
     },
     {
@@ -108,6 +117,7 @@
       "password": "BxQqlAfsLZHx",
       "email": "lryalld@reverbnation.com",
       "phone": "795-586-0425",
+      "role": "admin",
       "isActive": true
     },
     {
@@ -116,6 +126,7 @@
       "password": "tSiV0ikg",
       "email": "jcaddelle@yellowpages.com",
       "phone": "920-788-6859",
+      "role": "admin",
       "isActive": false
     },
     {
@@ -124,6 +135,7 @@
       "password": "VnD25s",
       "email": "achilderleyf@shinystat.com",
       "phone": "148-136-0974",
+      "role": "user",
       "isActive": false
     },
     {
@@ -132,6 +144,7 @@
       "password": "xSPJYFc",
       "email": "fferrillog@japanpost.jp",
       "phone": "136-331-8538",
+      "role": "user",
       "isActive": true
     },
     {
@@ -139,6 +152,7 @@
       "name": "Kain Hynes",
       "password": "n3X7T4TEI2",
       "email": "khynesh@sakura.ne.jp",
+      "role": "user",
       "phone": "147-134-5840",
       "isActive": true
     },
@@ -147,6 +161,7 @@
       "name": "Jeramie Goss",
       "password": "yzAhme9hHgvp",
       "email": "jgossi@mlb.com",
+      "role": "admin",
       "phone": "848-770-3581",
       "isActive": true
     },
@@ -156,6 +171,7 @@
       "password": "XXHQc4Q",
       "email": "jnesfieldj@marriott.com",
       "phone": "489-230-6137",
+      "role": "user",
       "isActive": true
     },
     {
@@ -164,6 +180,7 @@
       "password": "LDEsSN6xdM",
       "email": "crobjohnsk@ucoz.com",
       "phone": "526-589-7439",
+      "role": "user",
       "isActive": true
     },
     {
@@ -171,6 +188,7 @@
       "name": "Hanni Jagels",
       "password": "R1UyOzdo2zs",
       "email": "hjagelsl@unc.edu",
+      "role": "user",
       "phone": "576-613-7381",
       "isActive": true
     },
@@ -180,6 +198,7 @@
       "password": "nxNygcHas",
       "email": "msilvermannm@google.com.br",
       "phone": "368-868-0620",
+      "role": "user",
       "isActive": false
     },
     {
@@ -188,6 +207,7 @@
       "password": "tXXZllILX",
       "email": "fbrunin@elegantthemes.com",
       "phone": "734-617-2695",
+      "role": "user",
       "isActive": false
     },
     {
@@ -195,6 +215,7 @@
       "name": "Ulrick Gagen",
       "password": "2CbRuwe6E",
       "email": "ugageno@fda.gov",
+      "role": "user",
       "phone": "226-997-3425",
       "isActive": true
     },
@@ -203,6 +224,7 @@
       "name": "Kyla Skipsey",
       "password": "yMzcpE9",
       "email": "kskipseyp@so-net.ne.jp",
+      "role": "user",
       "phone": "330-510-3278",
       "isActive": true
     },
@@ -211,6 +233,7 @@
       "name": "Bert Pott",
       "password": "oZnfNETHCxQC",
       "email": "bpottq@godaddy.com",
+      "role": "user",
       "phone": "147-357-5232",
       "isActive": false
     },
@@ -219,6 +242,7 @@
       "name": "Eadmund Bullin",
       "password": "89YKzlaf",
       "email": "ebullinr@washingtonpost.com",
+      "role": "user",
       "phone": "550-566-9831",
       "isActive": true
     },
@@ -227,6 +251,7 @@
       "name": "Stanislas Chong",
       "password": "81M7cqK97",
       "email": "schongs@who.int",
+      "role": "user",
       "phone": "486-366-9579",
       "isActive": false
     },
@@ -236,6 +261,7 @@
       "password": "EDAd6gN",
       "email": "jpoundesfordt@jugem.jp",
       "phone": "552-846-0607",
+      "role": "user",
       "isActive": false
     },
     {
@@ -244,6 +270,7 @@
       "password": "Gxdjx7K93Lp",
       "email": "cchewu@ted.com",
       "phone": "171-215-8541",
+      "role": "user",
       "isActive": true
     },
     {
@@ -251,6 +278,7 @@
       "name": "Waylen Pawelec",
       "password": "c9hiLD3j",
       "email": "wpawelecv@disqus.com",
+      "role": "user",
       "phone": "674-150-5556",
       "isActive": true
     },
@@ -260,6 +288,7 @@
       "password": "ZQcvEKXtTBw",
       "email": "ttoderiw@bbc.co.uk",
       "phone": "953-758-0242",
+      "role": "user",
       "isActive": true
     },
     {
@@ -268,6 +297,7 @@
       "password": "uJJzZ0DAx",
       "email": "mraffelsx@infoseek.co.jp",
       "phone": "280-696-4392",
+      "role": "user",
       "isActive": false
     },
     {
@@ -275,6 +305,7 @@
       "name": "Marline Haslum",
       "password": "gDVNYih",
       "email": "mhaslumy@timesonline.co.uk",
+      "role": "user",
       "phone": "177-950-4818",
       "isActive": true
     },
@@ -283,6 +314,7 @@
       "name": "Norah Vsanelli",
       "password": "4y0fmDW8d",
       "email": "nvsanelliz@dmoz.org",
+      "role": "user",
       "phone": "337-358-5190",
       "isActive": true
     },
@@ -291,6 +323,7 @@
       "name": "Deidre Penkman",
       "password": "4Qn4Rq4Ks",
       "email": "dpenkman10@posterous.com",
+      "role": "user",
       "phone": "565-824-6160",
       "isActive": false
     },
@@ -299,6 +332,7 @@
       "name": "Leone Roadknight",
       "password": "OVGNRcwVSP",
       "email": "lroadknight11@ox.ac.uk",
+      "role": "user",
       "phone": "211-418-7848",
       "isActive": false
     },
@@ -306,6 +340,7 @@
       "id": 39,
       "name": "Carson Causbey",
       "password": "A3xPUm",
+      "role": "user",
       "email": "ccausbey12@123-reg.co.uk",
       "phone": "698-388-1094",
       "isActive": false
@@ -315,6 +350,7 @@
       "name": "Phil McShea",
       "password": "XP0q38ig",
       "email": "pmcshea13@accuweather.com",
+      "role": "user",
       "phone": "282-665-1450",
       "isActive": true
     },
@@ -323,6 +359,7 @@
       "name": "Aggie Kilmister",
       "password": "sVoHpmiF",
       "email": "akilmister14@discovery.com",
+      "role": "user",
       "phone": "607-417-3003",
       "isActive": false
     },
@@ -330,6 +367,7 @@
       "id": 42,
       "name": "Germaine Flips",
       "password": "qxpX5KL",
+      "role": "user",
       "email": "gflips15@bandcamp.com",
       "phone": "252-256-8865",
       "isActive": false
@@ -338,6 +376,7 @@
       "id": 43,
       "name": "Adara Gogarty",
       "password": "osOZQvU",
+      "role": "user",
       "email": "agogarty16@paypal.com",
       "phone": "728-920-3504",
       "isActive": true
@@ -346,6 +385,7 @@
       "id": 44,
       "name": "Rafaelita Partington",
       "password": "RYKhRO",
+      "role": "user",
       "email": "rpartington17@hp.com",
       "phone": "523-942-4204",
       "isActive": false
@@ -354,6 +394,7 @@
       "id": 45,
       "name": "Nahum Kinsell",
       "password": "jp0KTX",
+      "role": "user",
       "email": "nkinsell18@cargocollective.com",
       "phone": "974-214-2438",
       "isActive": true
@@ -364,12 +405,14 @@
       "password": "n0IMLBzZAy",
       "email": "ghuxton19@scientificamerican.com",
       "phone": "607-138-7024",
+      "role": "user",
       "isActive": true
     },
     {
       "id": 47,
       "name": "Pedro Doghartie",
       "password": "70psK2JWYc",
+      "role": "user",
       "email": "pdoghartie1a@ovh.net",
       "phone": "485-742-1575",
       "isActive": false
@@ -378,6 +421,7 @@
       "id": 48,
       "name": "Maury Laux",
       "password": "1Ngl8uVN",
+      "role": "user",
       "email": "mlaux1b@google.pl",
       "phone": "474-638-8784",
       "isActive": true
@@ -387,6 +431,7 @@
       "name": "Jeannine MacMychem",
       "password": "jIoDv1P7q",
       "email": "jmacmychem1c@nbcnews.com",
+      "role": "user",
       "phone": "170-749-1448",
       "isActive": true
     },
@@ -394,6 +439,7 @@
       "id": 50,
       "name": "Hartley Flooks",
       "password": "LEWu7kQOC870",
+      "role": "user",
       "email": "hflooks1d@kickstarter.com",
       "phone": "381-280-0590",
       "isActive": true
@@ -402,6 +448,7 @@
       "id": 51,
       "name": "Claudette Chaplyn",
       "password": "5fXnnr",
+      "role": "user",
       "email": "cchaplyn1e@comcast.net",
       "phone": "342-543-9769",
       "isActive": true
@@ -411,6 +458,7 @@
       "name": "Gilbertine Wassung",
       "password": "1FJHATHEtg",
       "email": "gwassung1f@cocolog-nifty.com",
+      "role": "user",
       "phone": "552-175-6117",
       "isActive": false
     },
@@ -419,6 +467,7 @@
       "name": "Dannie Mitchelmore",
       "password": "hV0J20ijJn",
       "email": "dmitchelmore1g@arstechnica.com",
+      "role": "user",
       "phone": "159-318-6444",
       "isActive": true
     },
@@ -427,6 +476,7 @@
       "name": "Bev Hanse",
       "password": "Tj1xnuX",
       "email": "bhanse1h@google.cn",
+      "role": "user",
       "phone": "276-581-0429",
       "isActive": false
     },
@@ -435,6 +485,7 @@
       "name": "Reilly Loadsman",
       "password": "wGDpUTIqdyEK",
       "email": "rloadsman1i@sohu.com",
+      "role": "user",
       "phone": "701-368-8894",
       "isActive": true
     },
@@ -443,6 +494,7 @@
       "name": "Halley Curston",
       "password": "09RAeLllK",
       "email": "hcurston1j@histats.com",
+      "role": "user",
       "phone": "292-623-2807",
       "isActive": false
     },
@@ -450,6 +502,7 @@
       "id": 57,
       "name": "Cully Veivers",
       "password": "odU5pKcfm22c",
+      "role": "user",
       "email": "cveivers1k@icio.us",
       "phone": "409-200-7469",
       "isActive": true
@@ -458,6 +511,7 @@
       "id": 58,
       "name": "Laurie Batisse",
       "password": "rpi7tZsVI2s",
+      "role": "user",
       "email": "lbatisse1l@arstechnica.com",
       "phone": "460-213-6206",
       "isActive": false
@@ -466,6 +520,7 @@
       "id": 59,
       "name": "Abigale Kernocke",
       "password": "G2mvbaD",
+      "role": "user",
       "email": "akernocke1m@symantec.com",
       "phone": "845-291-6058",
       "isActive": true
@@ -475,6 +530,7 @@
       "name": "Harmonie Di Biaggi",
       "password": "2a7dVMj",
       "email": "hdi1n@wordpress.org",
+      "role": "user",
       "phone": "375-603-2352",
       "isActive": false
     },
@@ -482,6 +538,7 @@
       "id": 61,
       "name": "Tim Harnett",
       "password": "TwjIvSiIaQhs",
+      "role": "user",
       "email": "tharnett1o@naver.com",
       "phone": "124-288-4363",
       "isActive": false
@@ -490,6 +547,7 @@
       "id": 62,
       "name": "Daniele McCullouch",
       "password": "Z1xu8kt",
+      "role": "user",
       "email": "dmccullouch1p@reverbnation.com",
       "phone": "783-140-4503",
       "isActive": true
@@ -498,6 +556,7 @@
       "id": 63,
       "name": "Gib Fleeming",
       "password": "Bs2mnNj8",
+      "role": "user",
       "email": "gfleeming1q@google.es",
       "phone": "974-932-3156",
       "isActive": true
@@ -507,6 +566,7 @@
       "name": "Noelle Glen",
       "password": "XoypnGr38ZAr",
       "email": "nglen1r@trellian.com",
+      "role": "user",
       "phone": "153-128-5674",
       "isActive": false
     },
@@ -515,6 +575,7 @@
       "name": "Maynord Melling",
       "password": "zuF8dwlD",
       "email": "mmelling1s@mysql.com",
+      "role": "user",
       "phone": "594-390-8534",
       "isActive": false
     },
@@ -523,6 +584,7 @@
       "name": "Alair Remirez",
       "password": "wfct5f48",
       "email": "aremirez1t@artisteer.com",
+      "role": "user",
       "phone": "608-656-9770",
       "isActive": true
     },
@@ -530,6 +592,7 @@
       "id": 67,
       "name": "Lindsey Malcolm",
       "password": "dXO5Yxt",
+      "role": "user",
       "email": "lmalcolm1u@bing.com",
       "phone": "189-680-9762",
       "isActive": false
@@ -539,6 +602,7 @@
       "name": "Odetta Warboys",
       "password": "OITYqXjtqf",
       "email": "owarboys1v@linkedin.com",
+      "role": "user",
       "phone": "852-736-6407",
       "isActive": true
     },
@@ -548,6 +612,7 @@
       "password": "FZ0fs6Kwy92I",
       "email": "tbrea1w@patch.com",
       "phone": "291-262-4707",
+      "role": "user",
       "isActive": true
     },
     {
@@ -555,6 +620,7 @@
       "name": "Ardelle O'Shaughnessy",
       "password": "7lc4PGBex",
       "email": "aoshaughnessy1x@shareasale.com",
+      "role": "user",
       "phone": "757-442-9690",
       "isActive": true
     },
@@ -562,6 +628,7 @@
       "id": 71,
       "name": "Hyacinth O' Markey",
       "password": "UJ2f3lufOQf5",
+      "role": "user",
       "email": "ho1y@wp.com",
       "phone": "645-313-1566",
       "isActive": true
@@ -570,6 +637,7 @@
       "id": 72,
       "name": "Nerti Frensche",
       "password": "wunlPfLgOhR9",
+      "role": "user",
       "email": "nfrensche1z@newyorker.com",
       "phone": "441-943-0515",
       "isActive": true
@@ -579,6 +647,7 @@
       "name": "Meryl Breeder",
       "password": "X7b5tAtJ",
       "email": "mbreeder20@illinois.edu",
+      "role": "user",
       "phone": "682-592-3735",
       "isActive": true
     },
@@ -588,12 +657,14 @@
       "password": "5TDg4D",
       "email": "hclowney21@google.pl",
       "phone": "925-246-4873",
+      "role": "user",
       "isActive": false
     },
     {
       "id": 75,
       "name": "Bradly Bartoleyn",
       "password": "38ti65l2m",
+      "role": "user",
       "email": "bbartoleyn22@imageshack.us",
       "phone": "109-639-9494",
       "isActive": true
@@ -603,6 +674,7 @@
       "name": "Osborn Salzberger",
       "password": "xOytsGjFtEG4",
       "email": "osalzberger23@youtube.com",
+      "role": "user",
       "phone": "836-740-6650",
       "isActive": false
     },
@@ -611,6 +683,7 @@
       "name": "Edward O'Duane",
       "password": "J0awYzhp",
       "email": "eoduane24@linkedin.com",
+      "role": "user",
       "phone": "526-512-1705",
       "isActive": true
     },
@@ -618,6 +691,7 @@
       "id": 78,
       "name": "Wilt Beaglehole",
       "password": "ZHaVkyMhc",
+      "role": "user",
       "email": "wbeaglehole25@patch.com",
       "phone": "375-179-1332",
       "isActive": false
@@ -627,6 +701,7 @@
       "name": "Kimble Oertzen",
       "password": "obLE3P",
       "email": "koertzen26@nyu.edu",
+      "role": "user",
       "phone": "196-186-7890",
       "isActive": false
     },
@@ -634,6 +709,7 @@
       "id": 80,
       "name": "De Burmingham",
       "password": "a80NJ9z6c",
+      "role": "user",
       "email": "dburmingham27@cargocollective.com",
       "phone": "245-428-9559",
       "isActive": true
@@ -642,6 +718,7 @@
       "id": 81,
       "name": "Linea Bamlett",
       "password": "d7D8S4xdE",
+      "role": "user",
       "email": "lbamlett28@quantcast.com",
       "phone": "982-234-3980",
       "isActive": true
@@ -652,6 +729,7 @@
       "password": "0zTC4RAl",
       "email": "sscurrell29@sfgate.com",
       "phone": "620-961-3468",
+      "role": "user",
       "isActive": true
     },
     {
@@ -660,6 +738,7 @@
       "password": "4EdUML8ZR",
       "email": "rcobbledick2a@i2i.jp",
       "phone": "464-307-1253",
+      "role": "user",
       "isActive": false
     },
     {
@@ -668,6 +747,7 @@
       "password": "SRT0ntV9",
       "email": "awoolen2b@furl.net",
       "phone": "198-116-3526",
+      "role": "user",
       "isActive": true
     },
     {
@@ -675,6 +755,7 @@
       "name": "Koralle Chace",
       "password": "KyzWgzV3ejb",
       "email": "kchace2c@si.edu",
+      "role": "user",
       "phone": "753-213-7933",
       "isActive": true
     },
@@ -683,6 +764,7 @@
       "name": "Roana Jewiss",
       "password": "UNRtmphwKed",
       "email": "rjewiss2d@livejournal.com",
+      "role": "user",
       "phone": "998-414-4086",
       "isActive": true
     },
@@ -692,12 +774,14 @@
       "password": "c9DEHtbL7tTY",
       "email": "saylmer2e@dion.ne.jp",
       "phone": "409-749-3255",
+      "role": "user",
       "isActive": false
     },
     {
       "id": 88,
       "name": "Melesa McKibbin",
       "password": "ZwL2ZH",
+      "role": "user",
       "email": "mmckibbin2f@fastcompany.com",
       "phone": "581-273-0926",
       "isActive": false
@@ -706,6 +790,7 @@
       "id": 89,
       "name": "Aurel Simester",
       "password": "SjUPKZYg",
+      "role": "user",
       "email": "asimester2g@weibo.com",
       "phone": "358-951-1851",
       "isActive": true
@@ -714,6 +799,7 @@
       "id": 90,
       "name": "Daphna Grewcock",
       "password": "bRpbvlWQpa",
+      "role": "user",
       "email": "dgrewcock2h@friendfeed.com",
       "phone": "199-922-4066",
       "isActive": false
@@ -723,6 +809,7 @@
       "name": "Marla McNutt",
       "password": "TpCvR0u",
       "email": "mmcnutt2i@usatoday.com",
+      "role": "user",
       "phone": "950-207-9191",
       "isActive": true
     },
@@ -731,6 +818,7 @@
       "name": "Jarib Cobleigh",
       "password": "6aSBgh6W8r12",
       "email": "jcobleigh2j@redcross.org",
+      "role": "user",
       "phone": "885-677-9257",
       "isActive": true
     },
@@ -739,6 +827,7 @@
       "name": "Brodie Suett",
       "password": "Op98ImMKa",
       "email": "bsuett2k@techcrunch.com",
+      "role": "user",
       "phone": "338-347-5341",
       "isActive": true
     },
@@ -746,6 +835,7 @@
       "id": 94,
       "name": "Julissa Denisovich",
       "password": "azeq5cIHeki",
+      "role": "user",
       "email": "jdenisovich2l@oracle.com",
       "phone": "947-581-1799",
       "isActive": false
@@ -754,6 +844,7 @@
       "id": 95,
       "name": "Trish Di Roberto",
       "password": "8e27D2wiO",
+      "role": "user",
       "email": "tdi2m@sbwire.com",
       "phone": "852-756-8065",
       "isActive": false
@@ -762,6 +853,7 @@
       "id": 96,
       "name": "Deerdre Halewood",
       "password": "8lskAOl",
+      "role": "user",
       "email": "dhalewood2n@myspace.com",
       "phone": "638-136-5894",
       "isActive": false
@@ -770,6 +862,7 @@
       "id": 97,
       "name": "Yasmin Tubb",
       "password": "dWjk1OZAA",
+      "role": "user",
       "email": "ytubb2o@china.com.cn",
       "phone": "512-785-1377",
       "isActive": false
@@ -778,6 +871,7 @@
       "id": 98,
       "name": "Verney Pridie",
       "password": "c5PGVmtH",
+      "role": "user",
       "email": "vpridie2p@msn.com",
       "phone": "480-513-2157",
       "isActive": false
@@ -786,6 +880,7 @@
       "id": 99,
       "name": "Shelia Aleksandrov",
       "password": "ZTjmKIPwLifc",
+      "role": "user",
       "email": "saleksandrov2q@dell.com",
       "phone": "749-820-7520",
       "isActive": true
@@ -794,6 +889,7 @@
       "id": 100,
       "name": "Town Brownjohn",
       "password": "jsPgepiJBGZ",
+      "role": "user",
       "email": "tbrownjohn2r@reddit.com",
       "phone": "813-421-3472",
       "isActive": false
