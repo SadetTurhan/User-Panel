@@ -14,11 +14,8 @@ import {
   import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
   import HelpIcon from '@mui/icons-material/Help';
   import SettingsIcon from '@mui/icons-material/Settings';
-import { useState } from "react";
 
 function Sidebar(){
-  const [open, setOpen] = useState(false);
-  const toggleOpen = () => setOpen(cur => !cur);
   
     return (
       <div className="h-screen bg-gradient-to-r from-blue-gray-50 to-blue-gray-100">

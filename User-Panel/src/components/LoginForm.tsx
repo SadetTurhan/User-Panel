@@ -6,7 +6,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import signupimg from "../assets/signup.jpg"
 import { z } from "zod";
 import axios from 'axios';
-
+import { setUserName } from '../redux/usersSlice';
+import { useDispatch } from 'react-redux';
 
 const validationSchema = z.object({
     email: z.string().min(1, { message: "Invalid email or password" }).email({message: "Invalid email or password",}),
@@ -16,6 +17,7 @@ const validationSchema = z.object({
 
 export default function LoginForm() {
   const { register, handleSubmit, formState: { errors } } = useForm<ValidationSchema>({resolver: zodResolver(validationSchema)});
+  const dispatch = useDispatch();
   const nav = useNavigate();
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     const { email, password } = data;
@@ -23,6 +25,8 @@ export default function LoginForm() {
       const response = await axios.get<UserType[]>(`http://localhost:3000/users?email=${email}&password=${password}`);
       const users = response.data;
       if (users.length > 0) {
+        const { name } = users[0];
+        dispatch(setUserName(name));
         nav("/userpanel");
       } else {
         console.log('Invalid email or password');
@@ -54,7 +58,7 @@ export default function LoginForm() {
           <p className="text-xs italic text-red-500">{errors.email?.message}</p>)}</label>
         <label>Password<Input className="p-6"  type="password" size="lg" placeholder='password' {...register("password", {required: true })} />{errors.email && (
           <p className="text-xs italic text-red-500">{errors.password?.message}</p>)}</label>
-        <Button color="light-green" className='mt-1' type="submit" fullWidth>submit</Button>
+        <Button color="light-green" className='mt-1' type="submit" fullWidth>Log In</Button>
           <a href="#" className="font-medium text-blue-500 transition-colors hover:text-blue-700">Forgot Password?</a>
         <Typography color="gray" className="text-center font-normal">Don't have an account?
           <br/><a href="#" className="font-medium text-blue-500 transition-colors hover:text-blue-700">Sign In</a>

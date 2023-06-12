@@ -2,6 +2,7 @@
   "Users": [
     {
       "email": "johnsmith@gmail.com",
+      "password": "123456",
       "name": "John Smith",
       "phone": "296-791-5643",
       "role": "admin",
@@ -10,6 +11,7 @@
     },
     {
       "email": "Janesmith@gmail.com",
+      "password": "123456",
       "name": "Jane Smith",
       "phone": "0535-555-555-55",
       "role": "user",
@@ -17,15 +19,8 @@
       "id": 2
     },
     {
-      "email": "hans@gmail.com",
-      "name": "Hans Schmitt",
-      "phone": "1231-231-323",
-      "role": "admin",
-      "isActive": true,
-      "id": 3
-    },
-    {
       "email": "johannes@gmail.com",
+      "password": "123456",
       "name": "Johannes Smither",
       "phone": "2525-1414-1452",
       "role": "admin",
@@ -34,6 +29,7 @@
     },
     {
       "email": "shathorn4@cbsnews.com",
+      "password": "123456",
       "name": "Sigmund Hathorn",
       "phone": "103-374-1000",
       "role": "user",
@@ -42,6 +38,7 @@
     },
     {
       "email": "alinthead5@whitehouse.gov",
+      "password": "123456",
       "name": "Amble Linthead",
       "phone": "199-214-0393",
       "role": "user",
@@ -49,15 +46,8 @@
       "id": 6
     },
     {
-      "email": "msowden6@thetimes.co.uk",
-      "name": "Mallissa Sowden",
-      "phone": "447-499-8347",
-      "role": "user",
-      "isActive": false,
-      "id": 7
-    },
-    {
       "email": "mkingerby7@lycos.com",
+      "password": "123456",
       "name": "May Kingerby",
       "phone": "594-182-9282",
       "role": "user",

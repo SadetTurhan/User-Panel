@@ -6,10 +6,12 @@ import { useDispatch } from "react-redux";
 
 interface UsersState {
   users: UserType[];
+  userName: string;
 }
 
 const initialState: UsersState = {
   users: [],
+  userName: '',
 };
 
 const usersSlice = createSlice({
@@ -22,10 +24,13 @@ const usersSlice = createSlice({
     deleteUser: (state, action: PayloadAction<number>) => {
       state.users = state.users.filter(user => user.id !== action.payload);
     },
+    setUserName: (state, action: PayloadAction<string>) => {
+      state.userName = action.payload;
+    },
   },
 });
 
-export const { setUsers, deleteUser } = usersSlice.actions;
+export const { setUsers, deleteUser, setUserName } = usersSlice.actions;
 export default usersSlice.reducer;
 
 const UserList = () => {

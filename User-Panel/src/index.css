@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.TableContainer {
+    overflow-x: auto;
+  }
+  
+  .Table {
+    min-width: 500px;
+  }
+  
+  @media (max-width: 600px) {
+    .Table {
+      min-width: 300px;
+    }
+  }
+
+  .primary {
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+  }
+  
+  .primary.active {
+    transform: translateX(-100%);
+  }

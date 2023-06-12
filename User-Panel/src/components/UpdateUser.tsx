@@ -62,7 +62,7 @@ function UpdateUser() {
 
     fetchUserData();
   }, [userId, setValue]);
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(user?.isActive || false);
   return (
     <div className="grid grid-cols-5 h-screen bg-gradient-to-r from-green-50 to-light-green-100">
       <Sidebar></Sidebar>
@@ -117,7 +117,7 @@ function UpdateUser() {
               <label>
         Status
         <Checkbox
-  defaultChecked={isActive}
+  checked={isActive}
   onChange={(e) => setIsActive(e.target.checked)}
 />
             </label>
